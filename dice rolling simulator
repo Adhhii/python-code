@@ -1,0 +1,16 @@
+import random
+roll = 'yes'
+
+while roll == 'yes':
+    values = random.randint(1,6)
+    print('Rolling the Dice> > >')
+    print('-------------------')
+    print('Values are: ',values)
+    print('-------------------')
+    roll = input('you wanna roll again')
+    if roll == 'no':
+        print('-------------------')
+        print('Thankyou for playing')
+    
+        
+
