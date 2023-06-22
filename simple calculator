@@ -1,0 +1,36 @@
+try:
+    while True:    
+        print('Welcome to Simply calculator !!')
+        print()
+        num1 = int(input('Enter your first value:'))
+        num2 = int(input('Enter your second value:'))
+        print()
+        operator = input('What operation do you like to perform (+,-,*,/) ')
+        print()
+        if operator == '+':
+            ans = num1 + num2 
+            print('You have choosed the addition operation your answer is:',ans)
+        elif operator == '-':
+            ans = num1 - num2
+            print('You have choosed the subtraction operation your answer is:',ans)
+        elif operator == '*':
+            ans = num1 * num2
+            print('You have choosed the multiplication operation your answer is:',ans)
+        elif operator == '/':
+            print('You have choosed the division operation your answer is:',ans)
+        else:
+            print('You have entered a invalid operator please enter correctly')
+        print()    
+        repeat = input('Do you like to use the calculator again:(yes/no)')
+        if repeat == 'yes':
+            print()
+        elif repeat == 'no':
+            print('Thank you for using the calculator ')
+        else:
+            print('You have entered an invalid entry only enter (yes/no)')
+            break
+except ValueError as e:
+    print()
+    print(e)
+    print('-----------')
+    print('you have an value error')
