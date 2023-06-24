@@ -1,0 +1,54 @@
+import random
+
+options = ['SNAKE','WATER','GUN']
+rounds = int(input('How many rounds do you like to play:'))
+
+points = 0
+cp_points = 0
+roun = 1
+computer = random.choice(options)
+
+while roun <= rounds:
+    print('-----------------------')
+    print('Round num:',roun)
+    user = input('What you like to select:').upper()
+    
+    if user not in options:
+        print('Please enter the correct options')
+    
+    while user in options:
+        roun += 1
+        if user == 'SNAKE':
+            if computer == 'SNAKE':
+                print(f'You have entered {user} and computer selected {computer} match is tie')
+            elif computer == 'WATER':
+                print(f'You have entered {user} and computer selected {computer} you won')
+                points += 1
+            elif computer == 'GUN':
+                print(f'You have entered {user} and computer selected {computer} you lose')
+                cp_points += 1
+        if user == 'WATER':
+            if computer == 'SNAKE':
+                print(f'You have entered {user} and computer selected {computer} you lose ')
+                cp_points += 1
+            elif computer == 'WATER':
+                print(f'You have entered {user} and computer selected {computer} match is tie')
+            elif computer == 'GUN':
+                print(f'You have entered {user} and computer selected {computer} you won')
+                points += 1
+        if user == 'GUN':
+            if computer == 'SNAKE':
+                print(f'You have entered {user} and computer selected {computer} you won')
+                points += 1
+            elif computer == 'WATER':
+                print(f'You have entered {user} and computer selected {computer} you lose')
+                cp_points += 1
+            elif computer == 'GUN':
+                print(f'You have entered {user} and computer selected {computer} match is tie')
+        break
+print('<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>')
+print(f'You got {points} points and computer got {cp_points}')
+print('<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>')
+
+
+
