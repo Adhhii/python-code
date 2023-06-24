@@ -1,0 +1,41 @@
+import random
+print('Welcome to Rock, Paper, Scissor Game with the computer')
+options = ('ROCK','PAPER','SCISSOR')
+computer = random.choice(options)
+
+def play():
+    user_input = input('What do you like to select:').upper()
+    print('you have selected:',user_input)
+    print('The computer has selected:',computer)
+    if computer == 'ROCK':
+        if user_input == 'ROCK':
+            print('You and the Computer have selected the same value:',user_input,'/nSo it is tie')
+        if user_input == 'PAPER':
+            print('You have selected:',user_input,'and the Computer has selected:',computer,'so you win')
+        if user_input == 'SCISSOR':
+            print('You have selected:',user_input,'and the Computer has selected:',computer,'so you lose')
+
+    elif computer == 'PAPER':
+        if user_input == 'PAPER':
+            print('You and the Computer have selected the same value:',user_input,'/nSo it is tie')
+        if user_input == 'ROCK':
+            print('You have selected:',user_input,'and the Computer has selected:',computer,'so you lose')
+        if user_input == 'SCISSOR':
+            print('You have selected:',user_input,'and the Computer has selected:',computer,'so you win')
+
+
+    elif computer == 'SCISSOR':
+        if user_input == 'SCISSOR':
+            print('You and the Computer have selected the same value:',user_input,'\nSo it is tie')
+        if user_input == 'PAPER':
+            print('You have selected:',user_input,'and the Computer has selected:',computer,'so you lose')
+        if user_input == 'ROCK':
+            print('You have selected:',user_input,'and the Computer has selected:',computer,'so you win')
+
+play()
+
+
+            
+    
+        
+
