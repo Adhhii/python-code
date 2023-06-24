@@ -1,0 +1,40 @@
+import random
+
+print('HELLO! \nWELCOME TO RANDOM NUMBER GAME.\nTHE COMPUTER WILL GUESS A NUMBER\nYOU HAVE TO CHOOSE THE CORRECT ANSWER \nONE GUESS EQUALS TO ONE POINT \nLETS BEGGIN THE GAME ')
+print('---------------------------')
+tot_round = int(input('How many rounds do you like to play'))
+print('---------------------------')
+start = int(input('Enter the starting value:'))
+end   =  int(input('Enter the ending value:'))
+print('---------------------------')
+crt_guess = 0
+round = 0
+
+computer = random.randint(start,end)
+computer = int(computer)
+
+
+while True:
+    while round <= tot_round - 1:
+        round +=1
+        
+        guess = int(input(f'Enter your guess between {start} - {end}:'))
+        print('----------------------------')
+        print('The number is:',computer)
+        print('----------------------------')
+        print(f'You played the {round} round')
+       
+        if guess == computer:
+            print('you have won')
+            crt_guess +=1
+            print('<<<<<<<<<>>>>>>>>>>')
+            print(f'You got {crt_guess} points')
+            
+        elif guess != computer:
+            print('you have loose')
+            crt_guess += 0
+    break
+
+print('--------------------------')
+print(f'congrats you have got {crt_guess} points')
+            
