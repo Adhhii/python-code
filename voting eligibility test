@@ -1,0 +1,12 @@
+print('Welcome to voter eligiblity test')
+
+age = int(input('Enter your age:'))
+rem_age = 18 - age 
+
+if age > 18:
+    print('You are eligible to vote')
+elif age < 18:
+    print('You are not eligible to vote')
+    print('You still have:',rem_age,'years left for voting')
+else:
+    print('Please enter a correct value')
